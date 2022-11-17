@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+
+    <style>
+        *{
+            text-align: center;
+        }
+        h1, h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+        }
+        h1{
+            font-weight: 500;
+            font-size: 100px;
+            
+            text-shadow: 5px 5px #ff0000, 10px 10px #006eff;
+            color: #d9ff00;
+        }
+        p{
+            font-family: monospace;
+            font-style: normal;
+            font-weight: 250;
+            font-size: 25px;
+        }
+        body{
+            background: url("background-menu1.png") no-repeat center fixed;
+            background-size: cover;
+        }
+        .border{
+            width: 50%;
+            padding: 55px;
+            margin: auto;
+        }
+        div{
+            text-align: center;
+            margin: 3% auto;
+        }
+        button{
+            width: 282px;
+            height: 43px;
+            background-color: #48b5d6;
+            border-radius: 7px;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        button:active{
+            background-color: #94def5;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="JetForce.js"></script>
+
+    <div id="front" class="border" style="display: initial;">
+        <h1>JET-FORCE</h1>
+    </div>
+
+
+    <div id="frontbutton" class="border" style="display: initial;">
+
+        <div>
+            <button onclick="levels(false)">START</button>
+        </div>
+        <div>
+            <button onclick="about(false)">ABOUT</button>
+        </div>
+
+    </div>
+
+    <div id="about" style="display: none;">
+        <p style="color: #b1fff9; padding: 150px 0;">
+            This game is about a member of a special force accomplishing missions
+            by dodging traps set by a terrorist while in constant risk of falling to their demise<br><br>
+            Enjoy!
+        </p>
+        <br>
+        <button onclick="about(true)">Back to main menu</button>
+    </div>
+
+    <div id="levels" style="display: none;">
+        <br>
+        <a href="JetForce-Lv1.html"><button>Mission 1</button></a><br>
+        <a href="JetForce-Lv2.html"><button>Mission 2</button></a><br>
+        <a href="JetForce-Lv3.html"><button>Mission 3</button></a>
+        <div>
+            <button onclick="levels(true)">Back to main menu</button>
+        </div>
+    </div>
+
+</body>
+</html>

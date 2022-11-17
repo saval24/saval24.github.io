@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet-Force</title>
+
+    <style>
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+        body{
+            background: url("background-menu.png") no-repeat center fixed;
+            background-size: cover;
+        }
+        h1, h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+        }
+        h1{
+            font-weight: 500;
+            font-size: 50px;
+            
+            text-shadow: 3px 3px #ff0000, 6px 6px #006eff;
+            color: #d9ff00;
+        }
+        .border{
+            width: 50%;
+            padding: 155px;
+            margin: auto;
+        }
+        div{
+            text-align: center;
+            margin: 3% auto;
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+        button{
+            width: 141px;
+            height: 43px;
+            background-color: #48b5d6;
+            border-radius: 7px;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        button:active{
+            background-color: #94def5;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- <audio id="select" src="select.wav"></audio> -->
+
+    <script src="JetForce-Lv1.js"></script>
+
+    <div id="border" class="border" style="display: initial;">
+        <div>
+            <h1>Choose your character</h2>
+            <button onclick="changeSprite(0)">Alpha</button>
+            <button onclick="changeSprite(2)">Bravo</button>
+            <button onclick="changeSprite(4)">Charlie</button>
+        </div>
+        <div>
+            <img src="JetGuy1.png">
+            <img src="Jetguy3.png">
+            <img src="Jetguy5.png">
+        </div>
+    </div>
+    
+    <div id="win" style="display: none;">
+        <p style="text-align: left; color: #00ff00;">
+            Mission accomplished, well done!
+        </p>
+        <a href="JetForce-Lv2.html">
+            <button>Continue</button>
+        </a>
+    </div>
+    <div id="lose"  style="display: none;">
+        <p style="text-align: left; color: #ff0000;">
+            You Died
+        </p>
+        <button onclick="reload()">
+            Retry
+        </button>
+        <a href="index.html">
+            <button>Main Menu</button>
+        </a>
+    </div>
+
+</body>
+</html>
